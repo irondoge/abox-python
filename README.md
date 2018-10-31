@@ -22,8 +22,8 @@ Downloaded to hello.mp3
 
 ## Download
 
-* [Version 1.0]()
-* Bash implementation - see [abox-bash]()
+* [Version 1.0](https://github.com/irondoge/abox-python/releases/tag/1.0.1)
+* Bash implementation - see [abox-bash](https://github.com/aboxapi/abox-bash)
 
 ## Installation
 Installation through [pip](https://pip.pypa.io/en/stable/) is planned for future releases.
