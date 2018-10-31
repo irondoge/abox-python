@@ -141,7 +141,7 @@ def ab_voice_list(lang, cookie):
 		"User-Agent": USER_AGENT,
 		"Cookie": "acabox=" + cookie
 	}
-	rep = post(AB_ENDPOINT.base + AB_ENDPOINT.voices, headers=headers, data=lang)
+	rep = post(AB_ENDPOINT.base + AB_ENDPOINT.voice_l, headers=headers, data=lang)
 	if rep.status_code == codes.forbidden:
 		ab_cookie_refresh()
 		return ab_voice_list(lang, cookie)
@@ -286,7 +286,8 @@ def main(argv):
 	argc = len(argv)
 	box = Abox(output="out.ogg")
 	action_l, text = box.parse(argc, argv)
-	if box.option_l.mp3: box.change(output="out.mp3")
+	if box.option_l.output == "out.ogg" and box.option_l.mp3:
+		box.change(output="out.mp3")
 
 	sound = {
 		"cat": ab_cat,
@@ -300,9 +301,10 @@ def main(argv):
 			return True
 		return False
 
+	ret = False
 	if action_l:
 		for k, v in action_l.items():
-			if k in sound:
+			if k in sound and text:
 				ret = sound[k](box.query(text), box.option_l)
 			if k == "voice-list":
 				ret = print_list(ab_voice_list(v, ab_cookie()))
