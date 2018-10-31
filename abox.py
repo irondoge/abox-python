@@ -24,7 +24,7 @@ Usage: %s [options]... <text>...
 
   -u, --url
     Print the result sound file URL
-	This is the default action
+    This is the default action
 
   -c, --cat
     Write the result sound output to the standard output STDOUT
@@ -34,7 +34,7 @@ Usage: %s [options]... <text>...
 
   -d, --download
     Download the result sound file
-	The file will be renamed if specified with the output option
+    The file will be renamed if specified with the output option
 
   -v <voice>, --voice <voice>
     Specify a voice [default: antoinefromafar22k]
