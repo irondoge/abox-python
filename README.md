@@ -22,8 +22,8 @@ Downloaded to hello.mp3
 
 ## Download
 
-* [Version 1.0]()
-* Bash implementation - see [abox-bash]()
+* [Version 1.0](https://github.com/irondoge/abox-python/releases/tag/1.0.1)
+* Bash implementation - see [abox-bash](https://github.com/aboxapi/abox-bash)
 
 ## Installation
 Installation through [pip](https://pip.pypa.io/en/stable/) is planned for future releases.
@@ -48,7 +48,7 @@ Usage: %s [options]... <text>...
 
   -u, --url
     Print the result sound file URL
-	This is the default action
+    This is the default action
 
   -c, --cat
     Write the result sound output to the standard output STDOUT
@@ -58,7 +58,7 @@ Usage: %s [options]... <text>...
 
   -d, --download
     Download the result sound file
-	The file will be renamed if specified with the output option
+    The file will be renamed if specified with the output option
 
   -v <voice>, --voice <voice>
     Specify a voice [default: antoinefromafar22k]
